@@ -11,9 +11,8 @@ require 'stringio'
 #
 
 def birthdayCakeCandles(candles)
-    m = candles.max
-    c = candles.count(m)
-
+  m = candles.max
+  c = candles.count(m)
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
@@ -27,4 +26,4 @@ result = birthdayCakeCandles candles
 fptr.write result
 fptr.write "\n"
 
-fptr.close()
+fptr.close

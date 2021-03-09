@@ -11,20 +11,19 @@ require 'stringio'
 #
 
 def pickingNumbers(a)
-    ar = a.sort
-    r = 0
-    ar.each_with_index do |e,i|
-        c=1
-        i=i+1
-        while i<ar.size && (ar[i] - e) <= 1
-            c += 1
-            c>r ? r=c : r=r
-            i += 1
-        end
+  ar = a.sort
+  r = 0
+  ar.each_with_index do |e, i|
+    c = 1
+    i += 1
+    while i < ar.size && (ar[i] - e) <= 1
+      c += 1
+      r = c > r ? c : r
+      i += 1
     end
-    r
+  end
+  r
 end
-
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
 
@@ -37,4 +36,4 @@ result = pickingNumbers a
 fptr.write result
 fptr.write "\n"
 
-fptr.close()
+fptr.close

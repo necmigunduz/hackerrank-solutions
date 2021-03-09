@@ -4,9 +4,9 @@
 # Complete the getMoneySpent function below.
 #
 def getMoneySpent(keyboards, drives, b)
-    all = []
-    keyboards.each {|v| drives.each {|k| all << v+k if v+k <= b}}
-    all.empty? ? (-1) : (all.max)
+  all = []
+  keyboards.each { |v| drives.each { |k| all << v + k if v + k <= b } }
+  all.empty? ? -1 : all.max
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
@@ -32,4 +32,4 @@ moneySpent = getMoneySpent keyboards, drives, b
 fptr.write moneySpent
 fptr.write "\n"
 
-fptr.close()
+fptr.close

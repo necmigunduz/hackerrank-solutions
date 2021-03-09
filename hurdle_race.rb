@@ -5,11 +5,11 @@ require 'stringio'
 
 # Complete the hurdleRace function below.
 def hurdleRace(k, height)
-    if height.max < k
-        0
-    else
-        height.max - k
-    end
+  if height.max < k
+    0
+  else
+    height.max - k
+  end
 end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
@@ -27,5 +27,4 @@ result = hurdleRace k, height
 fptr.write result
 fptr.write "\n"
 
-fptr.close()
-
+fptr.close
