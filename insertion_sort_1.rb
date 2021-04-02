@@ -5,30 +5,23 @@ require 'stringio'
 
 # Complete the insertionSort1 function below.
 def insertionSort1(_n, arr)
-  num = arr[arr.size - 1]
+    l = arr.length - 1
+    last = arr[l]
 
-  placed = false
-
-  (arr.size - 2).downto(0) do |j|
-    if arr[j] > num
-      arr[j + 1] = arr[j]
-      p arr
-    else
-      arr[j + 1] = num
-      p arr
-      placed = true
-      break
+    while  l-1 >= 0 && arr[l-1] > last
+        if last < arr[l-1]  
+            arr[l] = arr[l-1] 
+            arr.each{|v| print "#{v} "}
+            puts
+        end
+        l -= 1
     end
-  end
-
-  unless placed
-    arr[0] = num
-    p arr
-  end
+    arr[l] = last
+    arr.each{|v| print "#{v} "}  
 end
 
 n = gets.to_i
 
 arr = gets.rstrip.split(' ').map(&:to_i)
-
 insertionSort1 n, arr
+
