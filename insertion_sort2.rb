@@ -16,15 +16,15 @@ end
 
 def insertionSort1(arr)  
     l = arr.length - 1
-    store = arr[l]
+    last = arr[l]
 
-    while  l-1 >= 0 && arr[l-1] > store
-        if store < arr[l-1]  
+    while  l-1 >= 0 && arr[l-1] > last
+        if last < arr[l-1]  
         arr[l] = arr[l-1] 
         end
         l -= 1
     end
-    arr[l] = store
+    arr[l] = last
     arr
 end
 
