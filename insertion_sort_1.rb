@@ -4,7 +4,7 @@ require 'json'
 require 'stringio'
 
 # Complete the insertionSort1 function below.
-def insertionSort1(_n, arr)
+def insertionSort1(n, arr)
     l = arr.length - 1
     last = arr[l]
 
